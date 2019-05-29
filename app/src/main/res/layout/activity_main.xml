@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bj"
+    tools:context="com.saineng.campussystem.activitys.MainActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_margin="25dp"
+        android:src="@mipmap/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <View
+                android:layout_weight="0.3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"/>
+
+            <ImageView
+                android:layout_weight="1"
+                android:src="@mipmap/title"
+                android:layout_width="0dp"
+                android:layout_height="80dp"/>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:text="订餐自助服务系统"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <Button
+            android:clickable="true"
+            android:id="@+id/btn_card"
+            android:layout_weight="1"
+            android:background="@drawable/btn_card"
+            android:layout_width="0dp"
+            android:layout_height="150dp" />
+
+        <View
+            android:layout_weight="0.6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <Button
+            android:clickable="true"
+            android:id="@+id/btn_order"
+            android:layout_weight="1"
+            android:background="@drawable/btn_order"
+            android:layout_width="0dp"
+            android:layout_height="150dp" />
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:text="广州赛能教育软件有限公司"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@mipmap/compony"
+            android:layout_weight="6"
+            android:layout_width="0dp"
+            android:layout_height="60dp"/>
+
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
