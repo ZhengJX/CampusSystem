@@ -9,7 +9,7 @@ public class MyDaoGenerator {
     public static void main(String args[]) throws Exception {
         //初始化一下数据库
         //第一个参数是版本号,第二个参数是为你生成的bean类放的文件夹名
-        Schema schema = new Schema(23, "greendao");
+        Schema schema = new Schema(25, "greendao");
         //设置一下生成的三个java文件的目录
         schema.setDefaultJavaPackageDao("com.saineng.dao");
 
@@ -62,6 +62,39 @@ public class MyDaoGenerator {
         schoolBean.addStringProperty("token");
         schoolBean.addStringProperty("room_id");
         schoolBean.addStringProperty("desc");
+
+
+        Entity studentBean = schema.addEntity("SchoolsUser");
+        studentBean.addIdProperty();
+        //studentBean.addStringProperty("id");
+        studentBean.addStringProperty("no_pass_add_time");
+        studentBean.addStringProperty("daily_use_amount");
+        studentBean.addStringProperty("daily_use_num");
+        studentBean.addStringProperty("is_bind_parents");
+        studentBean.addStringProperty("new_card_type");
+        studentBean.addStringProperty("card_sn");
+        studentBean.addStringProperty("token");
+        studentBean.addStringProperty("openid");
+        studentBean.addStringProperty("agent_token");
+        studentBean.addStringProperty("agent_openid");
+        studentBean.addStringProperty("user_type");
+        studentBean.addStringProperty("group_id");
+        studentBean.addStringProperty("user_level");
+        studentBean.addStringProperty("group_id_admin");
+        studentBean.addStringProperty("name");
+        studentBean.addStringProperty("sex");
+        studentBean.addStringProperty("birthday");
+        studentBean.addStringProperty("phone");
+        studentBean.addStringProperty("verify_code");
+        studentBean.addStringProperty("is_verified");
+        studentBean.addStringProperty("verify_time");
+        studentBean.addStringProperty("account_deposit");
+        studentBean.addStringProperty("subject");
+        studentBean.addStringProperty("is_subscribe");
+        studentBean.addStringProperty("subscribe_openid");
+        studentBean.addStringProperty("origin_card_sn");
+        studentBean.addStringProperty("unionId");
+        studentBean.addStringProperty("app_openid");
 
         new DaoGenerator().generateAll(schema, "app/src/main/java-gen");
 

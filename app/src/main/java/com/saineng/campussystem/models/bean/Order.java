@@ -12,146 +12,61 @@ public class Order
 {
 
 
-    /**
-     * result : 1
-     * server_time : 20170608092216
-     * list : [{"order_id":"201705228335201833","goods_name":"鸡腿饭套餐","goods_num":"1","user_name":"学生1","user_id":"750c4185","user_phone":"15622724419","valid_start":"10:00","valid_end":"15:00"},{"order_id":"201705221694148374","goods_name":"鸡腿饭套餐","goods_num":"1","user_name":"学生1","user_id":"750c4185","user_phone":"15622724419","valid_start":"10:00","valid_end":"15:00"},{"order_id":"201705228148068729","goods_name":"冬菇鸡腿饭汤套餐","goods_num":"1","user_name":"学生1","user_id":"750c4185","user_phone":"15622724419","valid_start":"10:00","valid_end":"15:00"},{"order_id":"201706073406841350","goods_name":"榨菜牛肉汤套餐","goods_num":"9","user_name":"学生1","user_id":"750c4185","user_phone":"15622724419","valid_start":"10:00","valid_end":"15:00"},{"order_id":"201706093132131566","goods_name":"鸡腿饭套餐","goods_num":"1","user_name":"学生1","user_id":"750c4185","user_phone":"15622724419","valid_start":"10:00","valid_end":"15:00"},{"order_id":"201706095753261577","goods_name":"冬菇鸡腿饭汤套餐","goods_num":"1","user_name":"学生1","user_id":"750c4185","user_phone":"15622724419","valid_start":"10:00","valid_end":"15:00"},{"order_id":"201706095187016441","goods_name":"榨菜牛肉汤套餐","goods_num":"1","user_name":"学生1","user_id":"750c4185","user_phone":"15622724419","valid_start":"10:00","valid_end":"15:00"},{"order_id":"201706072932214276","goods_name":"榨菜牛肉汤套餐","goods_num":"10","user_name":"学生1","user_id":"750c4185","user_phone":"15622724419","valid_start":"10:00","valid_end":"15:00"},{"order_id":"201706071025074381","goods_name":"榨菜牛肉汤套餐","goods_num":"1","user_name":"学生1","user_id":"750c4185","user_phone":"15622724419","valid_start":"10:00","valid_end":"15:00"},{"order_id":"201706070705944654","goods_name":"鲜辣排骨饭汤套餐","goods_num":"1","user_name":"学生1","user_id":"750c4185","user_phone":"15622724419","valid_start":"10:00","valid_end":"15:00"}]
-     */
+    private List<ClassListBean> classList;
 
-    private String result;
-    private String server_time;
-    /**
-     * order_id : 201705228335201833
-     * goods_name : 鸡腿饭套餐
-     * goods_num : 1
-     * user_name : 学生1
-     * user_id : 750c4185
-     * user_phone : 15622724419
-     * valid_start : 10:00
-     * valid_end : 15:00
-     */
-
-    private List<ListBean> list;
-
-    public String getResult()
-    {
-        return result;
+    public List<ClassListBean> getClassList() {
+        return classList;
     }
 
-    public void setResult(String result)
-    {
-        this.result = result;
+    public void setClassList(List<ClassListBean> classList) {
+        this.classList = classList;
     }
 
-    public String getServer_time()
-    {
-        return server_time;
-    }
+    public static class ClassListBean {
 
-    public void setServer_time(String server_time)
-    {
-        this.server_time = server_time;
-    }
+        private String className;
+        private List<StudentsBean> students;
 
-    public List<ListBean> getList()
-    {
-        return list;
-    }
-
-    public void setList(List<ListBean> list)
-    {
-        this.list = list;
-    }
-
-    public static class ListBean
-    {
-        private String order_id;
-        private String goods_name;
-        private String goods_num;
-        private String user_name;
-        private String user_id;
-        private String user_phone;
-        private String valid_start;
-        private String valid_end;
-
-        public String getOrder_id()
-        {
-            return order_id;
+        public String getClassName() {
+            return className;
         }
 
-        public void setOrder_id(String order_id)
-        {
-            this.order_id = order_id;
+        public void setClassName(String className) {
+            this.className = className;
         }
 
-        public String getGoods_name()
-        {
-            return goods_name;
+        public List<StudentsBean> getStudents() {
+            return students;
         }
 
-        public void setGoods_name(String goods_name)
-        {
-            this.goods_name = goods_name;
+        public void setStudents(List<StudentsBean> students) {
+            this.students = students;
         }
 
-        public String getGoods_num()
-        {
-            return goods_num;
-        }
+        public static class StudentsBean {
+            /**
+             * name : 陈坚城
+             * id : 28276
+             */
 
-        public void setGoods_num(String goods_num)
-        {
-            this.goods_num = goods_num;
-        }
+            private String name;
+            private String id;
 
-        public String getUser_name()
-        {
-            return user_name;
-        }
+            public String getName() {
+                return name;
+            }
 
-        public void setUser_name(String user_name)
-        {
-            this.user_name = user_name;
-        }
+            public void setName(String name) {
+                this.name = name;
+            }
 
-        public String getUser_id()
-        {
-            return user_id;
-        }
+            public String getId() {
+                return id;
+            }
 
-        public void setUser_id(String user_id)
-        {
-            this.user_id = user_id;
-        }
-
-        public String getUser_phone()
-        {
-            return user_phone;
-        }
-
-        public void setUser_phone(String user_phone)
-        {
-            this.user_phone = user_phone;
-        }
-
-        public String getValid_start()
-        {
-            return valid_start;
-        }
-
-        public void setValid_start(String valid_start)
-        {
-            this.valid_start = valid_start;
-        }
-
-        public String getValid_end()
-        {
-            return valid_end;
-        }
-
-        public void setValid_end(String valid_end)
-        {
-            this.valid_end = valid_end;
+            public void setId(String id) {
+                this.id = id;
+            }
         }
     }
 }
